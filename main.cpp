@@ -17,11 +17,11 @@
 #include <PubSubClient.h>
 
 // WiFi and MQTT Server Configuration
-const char *ssid = "telenet-A5C9B";          // Change to your WiFi SSID //embed
-const char *password = "nuN695U3fJQ3";       // Change to your WiFi password //weareincontrol
+const char *ssid = "WIFI_SSID";          // Change to your WiFi SSID //embed
+const char *password = "WIFI_PASSWORD";       // Change to your WiFi password //weareincontrol
 const char *mqtt_server = "senne3030.local"; // Change to your MQTT broker address
-const char *mqtt_username = "senne";         // Change to your MQTT username
-const char *mqtt_password = "senne123";      // Change to your MQTT password
+const char *mqtt_username = "MQTT_USERNAME";         // Change to your MQTT username
+const char *mqtt_password = "MQTT_PASSWORD";      // Change to your MQTT password
 const int mqtt_port = 1883;
 
 WiFiClient espClient;           // WiFi client
@@ -36,7 +36,7 @@ OneWire oneWire(OneWireBus);
 DallasTemperature sensors(&oneWire);
 
 #define LED_PIN 13
-#define NUM_LEDS 100
+#define NUM_LEDS 100 //Change to however leds you want on (my max is 100)
 CRGB leds[NUM_LEDS];
 
 #define SS_PIN 5   // Use any digital pin for SS (Slave Select)
