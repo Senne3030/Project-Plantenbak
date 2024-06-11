@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 from influxdb import InfluxDBClient
 
 # MQTT settings
-MQTT_BROKER = "senne3030.local"
+MQTT_BROKER = "senne3030.local" #Your raspberry pi address or <HostName>.local
 MQTT_PORT = 1883
 MQTT_TOPIC_TEMPERATURE = "home/plantenbak/temperature"
 MQTT_TOPIC_HUMIDITY = "home/plantenbak/humidity"
@@ -12,15 +12,15 @@ MQTT_TOPIC_LED = "home/plantenbak/led"
 MQTT_TOPIC_WATER_PUMP = "home/plantenbak/waterPump"
 MQTT_TOPIC_WATER_SENSOR = "home/plantenbak/watercontainer"
 MQTT_TOPIC_FAN = "home/plantenbak/fan"
-MQTT_USERNAME = "senne"
-MQTT_PASSWORD = "senne123"
+MQTT_USERNAME = "YOUR_MQTT_USERNAME"
+MQTT_PASSWORD = "YOUR_MQTT_PASSWORD"
 
 # InfluxDB settings
 INFLUXDB_ADDRESS = "senne3030.local"
 INFLUXDB_PORT = 8086
-INFLUXDB_DATABASE = "DATA"
-INFLUXDB_USER = "senne"
-INFLUXDB_PASSWORD = "senne123"
+INFLUXDB_DATABASE = "YOUR_INFLUX_DATABASE"
+INFLUXDB_USER = "YOUR_INFLUX_USERNAME"
+INFLUXDB_PASSWORD = "YOUR_INFLUX_PASSWORD"
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
